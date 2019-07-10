@@ -1,0 +1,29 @@
+<!-- {{ MEDIA_URL }} -->
+<!-- {% load static %} -->
+<!-- {% static 'images' as base-url %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+
+    
+    
+    {% for object in objects %}
+    
+    {% if object.age > 18 %}
+    <h2>{{object.name}}<br></h2>
+    <!-- no need if you change main url setting -->
+    <img src="{{object.image.url}}" width="250" alt="image"><br><br> 
+    {% endif %}
+    {% endfor %}
+        
+
+    
+
+</body>
+</html>
